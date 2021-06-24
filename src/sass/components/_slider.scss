@@ -62,10 +62,6 @@
     font-size: 3.25rem;
     cursor: pointer;
 
-    @media (max-width: 50em) {
-      top: 40%;
-    }
-
     &--left {
       left: 6%;
       transform: translate(-50%, -50%);

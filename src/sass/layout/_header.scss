@@ -25,6 +25,11 @@
     }
   }
 
+  &__text {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
   &__img {
     width: 100%;
     grid-column: 2 / 3;
