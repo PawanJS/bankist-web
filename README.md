@@ -17,7 +17,7 @@
 <br />
 <p align="center">
   <a href="https://bankist-web-by-pawanjs.netlify.app/">
-    <img src="./src/img/logo.png" alt="Logo" width="200" height="100">
+    <img src="./src/img/logo.png" alt="Logo" width="300" height="100">
   </a>
 
   <h3 align="center">Bankist-web</h3>
@@ -102,7 +102,7 @@ Start with the latest version of NPM to avoid any errors:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/PawanJS_/forkify.git
+   git clone https://github.com/PawanJS_/bankist-web.git
    ```
 2. Install NPM packages
    ```sh
@@ -157,7 +157,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Pawan JS - [Say Hie](https://www.pawanjs.xyz/#contact)
 
-Project Link: [https://github.com/PawanJS/forkify](https://github.com/PawanJS/forkify)
+Project Link: [Bankist](https://github.com/PawanJS/bankist-web)
 
 <!-- ACKNOWLEDGEMENTS -->
 
