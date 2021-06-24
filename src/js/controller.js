@@ -258,6 +258,8 @@ document
 
 // Menu toggle
 btnMenu.addEventListener('click', function () {
+  btnMenu.classList.toggle('nav--icon-active');
+
   menu.classList.toggle('nav__links--active');
 
   nav.style.background = '#f3f3f3';
@@ -270,5 +272,6 @@ btnMenu.addEventListener('click', function () {
 document.querySelectorAll('.nav__link').forEach(link =>
   link.addEventListener('click', function () {
     menu.classList.remove('nav__links--active');
+    btnMenu.classList.remove('nav--icon-active');
   })
 );

@@ -12,25 +12,27 @@
     <title>Bankist | When Banking meets Minimalist</title>
   </head>
   <body>
-    <header class="header container">
+    <header class="header container" id="home">
       <nav class="nav">
-        <img
-          src="img/logo.png"
-          alt="Bankist logo"
-          class="nav__logo"
-          id="logo"
-          designer="Jonas"
-          data-version-number="3.0"
-        />
+        <a href="#home">
+          <img
+            src="img/logo.png"
+            alt="Bankist logo"
+            class="nav__logo"
+            id="logo"
+            designer="Jonas"
+            data-version-number="3.0"
+          />
+        </a>
         <ul class="nav__links js-nav-links">
           <li class="nav__item">
-            <a class="nav__link" href="#section--1">Features</a>
+            <a class="nav__link" href="#features">Features</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--2">Operations</a>
+            <a class="nav__link" href="#operations">Operations</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--3">Testimonials</a>
+            <a class="nav__link" href="#testimonials">Testimonials</a>
           </li>
           <li class="nav__item">
             <a
@@ -47,9 +49,12 @@
             </a>
           </li>
         </ul>
-        <button class="btn__menu js-menu-btn">
-          <img class="nav__icon" src="img/menu.svg" alt="menu-open-icon" />
-        </button>
+        <!-- Mobile Navigation Icon -->
+        <div class="nav--icon-box js-menu-btn">
+          <div class="nav--icon nav--icon-top"></div>
+          <div class="nav--icon nav--icon-center"></div>
+          <div class="nav--icon nav--icon-bottom"></div>
+        </div>
       </nav>
       <div class="header__title">
         <h1>
@@ -68,7 +73,7 @@
         />
       </div>
     </header>
-    <section class="section" id="section--1">
+    <section class="section" id="features">
       <div class="section__title">
         <h2 class="section__description">Features</h2>
         <h3 class="section__header">
@@ -121,7 +126,7 @@
       </div>
     </section>
 
-    <section class="section" id="section--2">
+    <section class="section" id="operations">
       <div class="section__title">
         <h2 class="section__description">Operations</h2>
         <h3 class="section__header">
@@ -205,7 +210,7 @@
       </div>
     </section>
 
-    <section class="section" id="section--3">
+    <section class="section" id="testimonials">
       <div class="section__title section__title--testimonials">
         <h2 class="section__description">Not sure yet?</h2>
         <h3 class="section__header">

@@ -17,9 +17,48 @@
     left: 0;
   }
 
-  &__icon {
-    width: 2.5rem;
-    height: 2.5rem;
+  &--icon {
+    &-box {
+      padding: 1.5rem;
+      cursor: pointer;
+      display: none;
+      justify-self: end;
+
+      @media only screen and (max-width: 60em) {
+        display: block;
+      }
+    }
+
+    &-top,
+    &-bottom,
+    &-center {
+      background: #000;
+      width: 35px;
+      height: 2.5px;
+      border-radius: 10rem;
+      transition: all 0.3s;
+    }
+
+    &-top {
+      margin-bottom: 5px;
+    }
+
+    &-bottom {
+      margin-top: 5px;
+    }
+
+    // Classes to add with javascript to active mobile nav Icon
+    &-active &-center {
+      background-color: transparent;
+    }
+    &-active &-top {
+      transform: rotate(227deg) translate(-1px, -1px);
+      margin: 0;
+    }
+    &-active &-bottom {
+      transform: rotate(-227deg) translate(-2px, 3px);
+      margin: 0;
+    }
   }
 
   &__logo {
@@ -32,7 +71,7 @@
     align-items: center;
     list-style: none;
 
-    @media (max-width: 55em) {
+    @media (max-width: 60em) {
       display: none;
     }
 
