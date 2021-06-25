@@ -13,6 +13,11 @@ const tabsContent = document.querySelectorAll('.operations__content');
 const menu = document.querySelector('.js-nav-links');
 const btnMenu = document.querySelector('.js-menu-btn');
 
+// removing preload class to make transition work
+window.addEventListener('load', () => {
+  document.body.classList.remove('preload');
+});
+
 ///////////////////////////////////////
 // Modal window
 
