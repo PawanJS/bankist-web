@@ -53,6 +53,10 @@
       padding: 0 3rem 3rem;
     }
 
+    @media (max-width: 40em) {
+      padding: 0 2rem 3rem;
+    }
+
     &--active {
       display: grid;
       grid-template-columns: 7rem 1fr;

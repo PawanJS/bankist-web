@@ -13,11 +13,17 @@
   @media (max-width: 50em) {
     padding: 5rem 3rem;
   }
+
+  @media (max-width: 40em) {
+    padding: 5rem 2rem;
+  }
 }
 
 .section--hidden {
-  opacity: 0;
-  transform: translateY(8rem);
+  // opacity: 0;
+  // transform: translateY(8rem);
+
+  opacity: 1;
 }
 
 .section__title {
@@ -34,18 +40,13 @@
 }
 
 .section__header {
-  font-size: clamp(2.6rem, calc(1.6rem + 1.5vw), 4rem);
+  font-size: clamp(2.4rem, calc(1.6rem + 1.5vw), 4rem);
   line-height: 1.4;
   font-weight: 500;
 }
 
 p {
   color: #666;
-}
-
-/* This is BAD for accessibility! Don't do in the real world! */
-button:focus {
-  outline: none;
 }
 
 img {

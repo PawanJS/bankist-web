@@ -9,25 +9,18 @@
       content="Bankist, When banking meets minimalist. A simpler banking experience for a simpler life."
     />
     <link rel="shortcut icon" type="image/png" href="img/icon.png" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
-      rel="stylesheet"
-    />
     <title>Bankist | When Banking meets Minimalist</title>
   </head>
   <body>
     <header class="header container" id="home">
       <nav class="nav">
-        <a href="#home">
+        <a href="#home" class="nav__link" rel="noopener" rel="noreferrer">
           <figure class="nav__logo">
             <img
               src="img/logo.png"
               alt="Bankist logo"
               id="logo"
-              designer="Jonas"
               data-version-number="3.0"
-              rel="noopener"
-              rel="noreferrer"
             />
           </figure>
         </a>
@@ -103,11 +96,10 @@
           A simpler banking experience for a simpler life.
         </p>
         <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
-        <img
-          src="img/hero.jpg"
-          class="header__img"
-          alt="Minimalist bank items"
-        />
+        <picture class="header__img">
+          <source type="image/webp" srcset="./img/hero.webp" />
+          <img src="img/hero.jpg" alt="Minimalist bank items" />
+        </picture>
       </div>
     </header>
     <section class="section" id="features">
@@ -118,7 +110,14 @@
         </h2>
       </div>
       <div class="features container">
-        <img src="img/digital.jpg" alt="Computer" class="features__img" />
+        <picture>
+          <source
+            type="image/webp"
+            loading="lazy"
+            srcset="./img/digital.webp"
+          />
+          <img src="img/digital.jpg" loading="lazy" alt="Computer" />
+        </picture>
         <div class="features__feature">
           <div class="features__icon">
             <svg>
@@ -145,8 +144,14 @@
             rapid pace. You sow a seed we make it a tree.
           </p>
         </div>
-        <img src="img/grow.jpg" alt="Plant" class="features__img" />
-        <img src="img/card.jpg" alt="Credit card" class="features__img" />
+        <picture>
+          <source type="image/webp" loading="lazy" srcset="./img/grow.webp" />
+          <img src="img/grow.jpg" loading="lazy" alt="Plant" />
+        </picture>
+        <picture>
+          <source type="image/webp" loading="lazy" srcset="./img/card.webp" />
+          <img src="img/card.jpg" loading="lazy" alt="Credit card" />
+        </picture>
         <div class="features__feature">
           <div class="features__icon">
             <svg>
@@ -264,7 +269,12 @@
               instantly. Their interest rate is quite higher then competition.
             </blockquote>
             <address class="testimonial__author">
-              <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
+              <img
+                src="img/user-1.jpg"
+                alt="Aarav Lynn"
+                loading="lazy"
+                class="testimonial__photo"
+              />
               <h4 class="testimonial__name">Aarav Lynn</h4>
               <p class="testimonial__location">San Francisco, USA</p>
             </address>
@@ -282,7 +292,12 @@
               Straight to the point every time.
             </blockquote>
             <address class="testimonial__author">
-              <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
+              <img
+                src="img/user-2.jpg"
+                loading="lazy"
+                alt="Miyah Miles"
+                class="testimonial__photo"
+              />
               <h4 class="testimonial__name">Miyah Miles</h4>
               <p class="testimonial__location">London, UK</p>
             </address>
@@ -300,7 +315,12 @@
               the modern world.
             </blockquote>
             <address class="testimonial__author">
-              <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
+              <img
+                src="img/user-3.jpg"
+                loading="lazy"
+                alt="Francisco Gomes"
+                class="testimonial__photo"
+              />
               <h4 class="testimonial__name">Francisco Gomes</h4>
               <p class="testimonial__location">Lisbon, Portugal</p>
             </address>
@@ -362,7 +382,7 @@
         </li>
       </ul>
       <figure class="footer__logo">
-        <img src="img/icon.png" alt="Logo" />
+        <img src="img/icon.png" loading="lazy" alt="Logo" />
       </figure>
       <p class="footer__copyright">
         &copy; Copyright by

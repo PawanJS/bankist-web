@@ -31,20 +31,12 @@
     height: 40rem;
   }
 
-  @media (max-width: 35em) {
+  @media (max-width: 25em) {
     height: 45rem;
   }
 
-  @media (max-width: 30em) {
-    height: 55rem;
-  }
-
-  @media (max-width: 25em) {
-    height: 65rem;
-  }
-
   @media (max-width: 20em) {
-    height: 70rem;
+    height: 55rem;
   }
 
   &__btn {
@@ -61,6 +53,10 @@
     width: 5.5rem;
     font-size: 3.25rem;
     cursor: pointer;
+
+    @media (max-width: 40em) {
+      display: none;
+    }
 
     &--left {
       left: 6%;

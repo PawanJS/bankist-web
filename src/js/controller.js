@@ -100,7 +100,7 @@ const stickyNav = function (entries) {
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
-  rootMargin: `-${navHeight}px`,
+  rootMargin: `${navHeight}px`,
 });
 
 headerObserver.observe(header);
@@ -164,6 +164,9 @@ const slider = function () {
 
   let curSlide = 0;
   const maxSlide = slides.length;
+  let isDragging = false,
+    currentPosition,
+    newPosition;
 
   // Functions
   const createDots = function () {
@@ -215,6 +218,29 @@ const slider = function () {
     activateDot(curSlide);
   };
 
+  const getPositionX = event =>
+    event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+
+  const touchStart = function () {
+    return function (event) {
+      isDragging = true;
+
+      currentPosition = getPositionX(event);
+    };
+  };
+
+  const touchMove = function (event) {
+    if (isDragging) {
+      newPosition = getPositionX(event);
+    }
+  };
+
+  const touchEnd = function () {
+    isDragging = false;
+
+    currentPosition > newPosition ? nextSlide() : prevSlide();
+  };
+
   const init = function () {
     goToSlide(0);
     createDots();
@@ -239,6 +265,12 @@ const slider = function () {
       activateDot(slide);
     }
   });
+
+  document.querySelectorAll('.slide').forEach((slide, index) => {
+    slide.addEventListener('touchstart', touchStart(index), { passive: true });
+    slide.addEventListener('touchend', touchEnd, { passive: true });
+    slide.addEventListener('touchmove', touchMove, { passive: true });
+  });
 };
 slider();
 
@@ -261,8 +293,8 @@ document
 // Menu toggle
 btnMenu.addEventListener('click', function () {
   btnMenu.classList.toggle('nav--icon-active');
-
   menu.classList.toggle('nav__links--active');
+  document.body.classList.toggle('overflow-handler');
 
   nav.style.background = '#f3f3f3';
 
@@ -275,5 +307,6 @@ document.querySelectorAll('.nav__link').forEach(link =>
   link.addEventListener('click', function () {
     menu.classList.remove('nav__links--active');
     btnMenu.classList.remove('nav--icon-active');
+    document.body.classList.remove('overflow-handler');
   })
 );
